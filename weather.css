@@ -29,12 +29,18 @@ h3{
 .pos-ab{
 	position: absolute;
 }
+#cityTitle{
+	width: 130px;
+}
 h4{
 	font-size: 18px;
 }
 header{
 	padding: 15px 7px 10px 15px;
 	background-color: #1e96f2;
+}
+section{
+	position: relative;
 }
 .left{
 	float: left;
@@ -57,6 +63,7 @@ header
 */
 .exchange{
 	font-size: 13px;
+	/* position: absolute; */
 }
 header a{
 	color: #fff;
@@ -142,6 +149,6 @@ main .ico{
 	position: absolute;
 	width: 24px;
 	height: 24px;
-	left: 42%;
-	top: 18px;
+	left: 108%;
+	top: 2px;
 }
