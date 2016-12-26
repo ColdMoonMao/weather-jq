@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="src/city.min.js">
+    </script>
+    <script src="src/city-data.js"></script>
+    <link rel=stylesheet href="src/city.css">
+</head>
+
+<body>
+    <header>
+        <div class="title"><a href="weather.html" id="back"><span class="back" >返回</span></a><span id="title">城市切换</span></div>
+    </header>
+    <div class="container" id="container">
+        <div class="oftenVisited">
+            <div class="title">最常访问的城市</div>
+            <div class="content" id="historyCityList">
+            </div>
+            <div class="chooseProvince">
+                <div class="title">选择省份</div>
+                <div class="content" id="cityList">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+console.log(city);
+var cityListDiv = document.getElementById("cityList");
+var cityList = city.citylist;
+
+for (var i = 0; i < cityList.length; i++) {
+    var button = document.createElement("button");
+    button.innerHTML = cityList[i].p;
+
+
+    button.onclick = (function(i) {
+        return function() {
+            console.log(cityList[i].p);
+            console.log(cityList[i].p == '北京' );
+            if (cityList[i].p == '北京' || cityList[i].p == '天津' || cityList[i].p == '重庆' || cityList[i].p == '上海' || cityList[i].p == '香港' || cityList[i].p == '澳门') {
+                localStorage.setItem("city", cityList[i].p);
+                console.log('test');
+                //                location.assign("city02.html?cityIndex=" + i);
+                location.assign("weather.html");
+            } 
+            else {
+                sessionStorage.setItem("city", JSON.stringify(cityList[i]));
+                //                location.assign("city02.html?cityIndex=" + i);
+                console.log('test' + '1');
+                location.assign("city02.html");
+            }
+
+        }
+    })(i);
+
+    cityListDiv.appendChild(button);
+}
+
+
+console.log(city);
+var historyCityListDiv = document.getElementById("historyCityList");
+var historyCityList = getCityOrderByTimes(8);
+
+for (var i = 0; i < historyCityList.length; i++) {
+    var button = document.createElement("button");
+    button.innerHTML = historyCityList[i].name;
+
+
+    button.onclick = (function(i) {
+        return function() {
+            localStorage.setItem("city", historyCityList[i].name);
+            location.assign("weather.html");
+            addCity(historyCityList[i].name);
+        }
+    })(i);
+
+    historyCityListDiv.appendChild(button);
+}
+</script>
+
+</html>

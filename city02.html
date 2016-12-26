@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script src="src/city.min.js">
+    </script>
+    <script src="src/city-data.js"></script>
+    <link rel=stylesheet href="src/city.css">
+</head>
+
+<body>
+     <header>
+        <div class="title"><a href="city.html" id="back"><span class="back" >返回</span></a><span id="title">选择城市</span></div>
+     </header>
+    <div id="cityList">
+    </div>
+</body>
+<script>
+//    var index = location.search.split("=")[1];
+//    var city =city.citylist[index];
+var city = JSON.parse(sessionStorage.getItem("city"));
+//    console.log(index);
+//    console.log(city);
+//    console.log(city);
+var cityListDiv = document.getElementById("cityList");
+var cityList = city.c;
+
+for (var i = 0; i < cityList.length; i++) {
+    var button = document.createElement("button");
+    button.innerHTML = cityList[i].n;
+
+
+    button.onclick = (function(i) {
+        return function() {
+            console.log(cityList[i]);
+            localStorage.setItem("city", cityList[i].n);
+            location.assign("weather.html");
+            addCity(cityList[i].n)
+        }
+    })(i);
+
+    cityListDiv.appendChild(button);
+}
+</script>
+
+</html>

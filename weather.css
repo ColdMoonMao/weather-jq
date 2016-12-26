@@ -1,0 +1,147 @@
+ *  {
+ 	/* font-family: 'Lato'; */
+ 	/* font: Microsoft YaHei; */
+ 	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+	box-sizing: border-box;
+	//border: 1px solid #3FF;
+}
+html,body{
+	margin: 0px;
+}
+a{
+	text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6{
+	margin: 0 auto;
+	font-weight: normal;
+	margin-bottom: 0.3em;
+}
+h1{
+	font-size: 30px;
+}
+h2{
+	font-size: 24px;
+}
+h3{
+	font-size: 20px;
+	font-weight: normal;
+}
+.pos-ab{
+	position: absolute;
+}
+h4{
+	font-size: 18px;
+}
+header{
+	padding: 15px 7px 10px 15px;
+	background-color: #1e96f2;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+	text-align: right;
+}
+.text-white{
+	color: #fff;
+}
+span{
+	display: inline-block;
+}
+.clear-float{
+	clear: both;
+}
+/*
+header
+*/
+.exchange{
+	font-size: 13px;
+}
+header a{
+	color: #fff;
+}
+.pic{
+	position: relative;
+	left: -15px;
+	top: 40px;
+}
+.today{
+	width: 110px;
+	height: 110px;
+	/*background-image: url("src/1.png");*/
+	/*background-position: -7px 0px;*/
+}
+img{
+	width: 100%;
+	height: 100%;
+}
+.cover{
+	background-color: rgba(255, 255, 255, 0.2);
+	margin-top: 0.6em;
+	border-radius: 3px;
+	padding: 3px;
+}
+#aqiContainer{
+	height: 27px;
+}
+header .ico{
+	width: 20px;
+	height: 17px;
+	top: 3px;
+	position: relative;
+	background-image: url("src/aqi.png");
+	background-position: 0px -1px  ;
+	background-size: 100%;
+}
+
+/*main*/
+main{
+	padding: 15px 14px 20px;
+	border-bottom: 1px solid #ededed;
+	font-size: 18px;
+	color: #666;
+}
+main .head{
+	font-size: 22px;
+	font-weight: lighter;
+}
+li{
+	list-style: none;
+}
+main li{
+	margin-top: 20px;
+}
+li span{
+	line-height: 18px;
+}
+.red{
+	color: #e62121;
+}
+.green{
+	color: #14b610;
+}
+.orange{
+	color: #ff800f;
+}
+main .ico{
+	background-image: url("src/ws.png");
+	-ms-background-position: 0px 0px;
+	background-position: 0px 0px;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	width: 35px;
+	height: 35px;
+	display: inline-block;
+	position: relative;
+	margin-left: 25px;
+	top: -5px;
+	margin-right: 10px;
+}
+.voiceimg{
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	left: 42%;
+	top: 18px;
+}

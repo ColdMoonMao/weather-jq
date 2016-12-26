@@ -1,0 +1,86 @@
+* {
+	box-sizing: border-box;
+ 	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+	//border: 1px solid #3FF;
+}
+html, body {
+	margin: 0px;
+}
+a {
+	text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 auto;
+}
+span{
+	display: inline-block;
+}
+.back{
+	left: 0;
+	position: absolute;
+	font-size: 20px;
+	color: #fff;
+	width: 70px;
+	text-align: right;
+	line-height: 37px;
+	height: 37px;
+}
+.back:before{
+	content: '';
+	border-top: 2px solid #fff;
+	border-left: 2px solid #fff;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	left: 13px;
+	top:11.5px;
+	transform: rotate(-45deg);
+}
+.title{
+	text-align: center;
+
+}
+.floatleft{
+	float: left;
+}
+.clearfloat{
+	clear: both;
+}
+header{
+	background-color: #157bd2;
+	height: 37px;
+	margin-bottom: 10px;
+}
+header .title{
+	font-size: 24px;
+	color: #fff;
+	line-height: 37px;
+}
+.container{
+	color: #666;
+	padding:  0px 10px 10px;
+}
+.container .title{
+	color: #5faaf5;
+	font-size: 22px;
+	margin: 12px auto ;
+}
+#cityList{
+	/* margin-top: 12px; */
+}
+.content{
+	flex: flex;
+}
+button{
+	/* width: 75px; */
+	height: 37px;
+	width: 23%;
+    margin: 1%;
+	background-color: #eaf4ff;
+	/* margin: 2.5px; */
+	line-height: 37px;
+	text-align: center;
+	border:none;
+	cursor: pointer;
+	box-shadow: 3px 2px 0 #eaf4ff;
+}
