@@ -37,7 +37,7 @@ for (var i = 0; i < cityList.length; i++) {
         return function() {
             console.log(cityList[i]);
             localStorage.setItem("city", cityList[i].n);
-            location.assign("weather.html");
+            location.assign("index.html");
             addCity(cityList[i].n)
         }
     })(i);

@@ -46,7 +46,7 @@ for (var i = 0; i < cityList.length; i++) {
                 localStorage.setItem("city", cityList[i].p);
                 console.log('test');
                 //                location.assign("city02.html?cityIndex=" + i);
-                location.assign("weather.html");
+                location.assign("index.html");
             } 
             else {
                 sessionStorage.setItem("city", JSON.stringify(cityList[i]));
@@ -74,7 +74,7 @@ for (var i = 0; i < historyCityList.length; i++) {
     button.onclick = (function(i) {
         return function() {
             localStorage.setItem("city", historyCityList[i].name);
-            location.assign("weather.html");
+            location.assign("index.html");
             addCity(historyCityList[i].name);
         }
     })(i);
