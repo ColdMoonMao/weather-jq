@@ -30,7 +30,7 @@ h3{
 	position: absolute;
 }
 #cityTitle{
-	width: 130px;
+	width: 165px;
 }
 h4{
 	font-size: 18px;
@@ -69,7 +69,7 @@ header a{
 	color: #fff;
 }
 .pic{
-	position: relative;
+	position: absolute;
 	left: -15px;
 	top: 40px;
 }
@@ -91,7 +91,10 @@ img{
 }
 #aqiContainer{
 	height: 27px;
+	/* position: relative; */
 }
+
+
 header .ico{
 	width: 20px;
 	height: 17px;
@@ -133,8 +136,8 @@ li span{
 }
 main .ico{
 	background-image: url("src/ws.png");
-	-ms-background-position: 0px 0px;
-	background-position: 0px 0px;
+	-ms-background-position: 0px 35.7143%;
+	background-position: 0px 35.7143%;
 	-webkit-background-size: 100%;
 	background-size: 100%;
 	width: 35px;
@@ -149,6 +152,10 @@ main .ico{
 	position: absolute;
 	width: 24px;
 	height: 24px;
-	left: 108%;
-	top: 2px;
+	/* left: 108%; */
+	top: 147px;
+	z-index: 10;
+}
+.autolocation{
+	color: #ffa200;
 }

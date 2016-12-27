@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="src/jquery.js"></script>
     <script src="src/city.min.js">
     </script>
     <script src="src/city-data.js"></script>
+    <script src="src/weather-data.js" type="text/javascript"></script>
+
     <link rel=stylesheet href="src/city.css">
 </head>
 
@@ -18,8 +21,7 @@
     <div class="container" id="container">
         <div class="oftenVisited">
             <div class="title">最常访问的城市</div>
-            <div class="content" id="historyCityList">
-            </div>
+            <div class="content" id="historyCityList"><button class="autolocation" id="autolocation">自动定位</button></div>
             <div class="chooseProvince">
                 <div class="title">选择省份</div>
                 <div class="content" id="cityList">
@@ -32,23 +34,23 @@
 console.log(city);
 var cityListDiv = document.getElementById("cityList");
 var cityList = city.citylist;
+//自动定位
+$('#autolocation').click(function () {
+    autoLocation() ;
+});
 
 for (var i = 0; i < cityList.length; i++) {
     var button = document.createElement("button");
     button.innerHTML = cityList[i].p;
-
-
     button.onclick = (function(i) {
         return function() {
-            console.log(cityList[i].p);
-            console.log(cityList[i].p == '北京' );
+            // console.log(cityList[i].p);
             if (cityList[i].p == '北京' || cityList[i].p == '天津' || cityList[i].p == '重庆' || cityList[i].p == '上海' || cityList[i].p == '香港' || cityList[i].p == '澳门') {
                 localStorage.setItem("city", cityList[i].p);
                 console.log('test');
                 //                location.assign("city02.html?cityIndex=" + i);
                 location.assign("index.html");
-            } 
-            else {
+            } else {
                 sessionStorage.setItem("city", JSON.stringify(cityList[i]));
                 //                location.assign("city02.html?cityIndex=" + i);
                 console.log('test' + '1');
@@ -64,7 +66,7 @@ for (var i = 0; i < cityList.length; i++) {
 
 console.log(city);
 var historyCityListDiv = document.getElementById("historyCityList");
-var historyCityList = getCityOrderByTimes(8);
+var historyCityList = getCityOrderByTimes(7);
 
 for (var i = 0; i < historyCityList.length; i++) {
     var button = document.createElement("button");

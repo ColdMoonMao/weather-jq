@@ -1,3 +1,7 @@
+if (!(localStorage.getItem('city'))) {
+    alert('正在自动定位城市')
+    autoLocation();
+}
 var aqiObj = [{
         condition: function(x) {
             return x <= 50
@@ -153,6 +157,9 @@ var listPicPosObj = [{
     weather: '小雨',
     pos: '0px -38px'
 }, {
+    weather: '毛毛雨/细雨',
+    pos: '0px -38px'
+}, {
     weather: '多云',
     pos: '0px -380px'
 }, {
@@ -169,6 +176,9 @@ var listPicPosObj = [{
     pos: '0 35.71429%'
 }, {
     weather: '晴转多云',
+    pos: '0 35.71429%'
+}, {
+    weather: '晴间多云',
     pos: '0 35.71429%'
 }, {
     weather: '小雨转阴',
@@ -202,6 +212,9 @@ var todayPicSrcObj = [{
     }, {
         weather: '阴',
         pos: 'src/3.png'
+    }, {
+        weather: '雨',
+        pos: 'src/11.png'
     }, {
         weather: '小雨',
         pos: 'src/11.png'
